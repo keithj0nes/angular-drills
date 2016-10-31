@@ -1,14 +1,56 @@
 <html ng-app="apiApp">
+<head>
+	<style media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			margin: 0 auto;
+			width: 600px;
+			height: ;
+			/*background: red;*/
+		}
+
+		ul {
+			padding: 20px 0;
+		}
+
+		li:first-child {
+			text-align: center;
+			margin-bottom: 3px;
+			border-bottom: 2px solid darkgray;
+		}
+
+		li:not(:first-child) {
+			margin-left: 90px;
+		}
+
+		li {
+			list-style-type: none;
+			padding: 5px 0;
+		}
+
+		.shipName {
+			font-size: 50px;
+		}
+
+
+	</style>
+</head>
 	<body ng-controller="mainCtrl">
+		<div class="container">
 
-		<ul ng-repeat="ship in starShips">
-			<li>Name: {{ship.name}}</li>
-			<li>Model: {{ship.model}}</li>
-			<li>Price: ${{ship.cost_in_credits}}</li>
-			<li>Crew: {{ship.crew}}</li>
-			<li>Passengers: {{ship.passengers}}</li>
-		</ul>
 
+			<ul ng-repeat="ship in starShips">
+				<li class="shipName">{{ship.name}}</li>
+				<li>Model: {{ship.model}}</li>
+				<li>Price: ${{ship.cost_in_credits}}.00</li>
+				<li>Crew: {{ship.crew}}</li>
+				<li>Passengers: {{ship.passengers}}</li>
+			</ul>
+		</div>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
